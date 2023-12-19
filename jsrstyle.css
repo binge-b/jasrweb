@@ -16,9 +16,9 @@ body {
 }
 
 .sectitle {
-    font-size: 4vw;
+    font-size: 28px;
     text-align: center;
-    margin: 50px auto;
+    margin: 100px auto;
     animation: titleAnimation 1.5s;
 }
 @keyframes titleAnimation {
@@ -301,10 +301,10 @@ slickメインビジュアル
 }
 
 .contentsText h2 {
-  font-size: 3rem;
+  font-size: 4vw;
   font-weight: bold;
   white-space: nowrap;
-  background-color: rgba(20,20,20,0.8);
+  background-color: rgba(20,20,20,0.5);
   padding: 10px 20px;
   line-height: 1.4;
   letter-spacing: 0.05;
@@ -318,7 +318,7 @@ slickメインビジュアル
 .contentsText p {
   color: #f0f0f0;
   line-height: 1.6;
-  background-color: rgba(20,20,20,0.8);
+  background-color: rgba(20,20,20,0.5);
   font-size: 1rem;
   max-width: 450px;
   padding: 15px;
@@ -330,7 +330,7 @@ slickメインビジュアル
 }
 
 .contents img {
-  width: 65%;
+  width: 60%;
   display: block;
   opacity: 0;
   transform: translateX(-20px);
@@ -364,8 +364,6 @@ section {
     max-width: 100%;
     margin: 0 auto;
   }
-
-
   
   ul.photos {
     display: grid;
@@ -448,42 +446,60 @@ section {
 
 /* アクセス */
 
-section #access {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+section {
   max-width: 900px;
-  max-height: 600px;
-  padding: 1rem;
-  margin: 0 auto 50px;
+  margin: 0 auto;
 }
 
-#adress {
-  width: 45%;
+.access-area {
+  display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
-.map {
-  max-width: 600px;
+.map iframe{
+  width: 400px;
+  height: 400px;
 }
 
-#adress ul li {
-  font-size: 1.3rem;
-}
-
-#adress-text {
-  justify-content: end;
-  text-align: left;
+.adress {
   margin: 20px;
 }
 
+.adress-number {
+  margin: 20px;
+}
+
+
+.adress-number ul li {
+  font-size: 1.3rem;
+}
+
+.adress-text {
+  font-size: 1rem;
+  align-items: center;
+  padding: 20px;
+}
+
 @media screen and (max-width: 768px) {
-  .map {
-    margin-bottom: 20px;
+  .access-area {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
-  #adress {
-    width: 100%;
+
+
+  .map{
+    margin: 1rem;
   }
+
+  .adress-text {
+  width: 100%;
+  font-size: 1rem;
+  align-items: center;
+  margin: 20px;
+}
+
 }
 
 
@@ -596,7 +612,12 @@ footer {
   width: 100%;
   background-color: #121212;
   color: #fff;
+  padding: 30px;
  }
+
+.footertitle {
+  align-items: end;
+}
 
 footer ul li a {
   color: #fff;
@@ -659,10 +680,10 @@ footer ul li a:hover {
 
     /* フッター */
     .footertitle {
-      font-size: 3vw;
+      font-size: 2rem;
       text-align: center;
       justify-content: center;
-      margin: 50px auto;
+      margin: 10px auto;
     }
     .footer-grid {
       grid-template-columns: 1fr 1fr;
